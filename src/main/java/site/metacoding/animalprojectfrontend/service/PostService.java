@@ -1,5 +1,7 @@
 package site.metacoding.animalprojectfrontend.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
@@ -13,5 +15,10 @@ public class PostService {
 
     public void 글쓰기(Post post) {
         postRepository.save(post);
+    }
+
+    public List<Post> 글목록보기(String board) {
+        List<Post> postsEntity = postRepository.findByBoard(board);
+        return postsEntity;
     }
 }

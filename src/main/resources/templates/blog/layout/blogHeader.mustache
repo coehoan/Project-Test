@@ -31,8 +31,10 @@
     </ul>
   </nav>
 </div>
+
 <!-- 블로그 상단바 끝 -->
 
+<!-- 게시판 양식 바꿔주는곳 -->
 <div class="m_div_display_none">
   <div id="adoptboard">
     {{>/blog/adoptboard}}
@@ -45,17 +47,4 @@
   </div>
 </div>
 
-<script>
-  $("#main").click(() => {
-    $("#boardPage").load(location.href + " #mainboard");
-  });
-  $("#adopt").click(() => {
-    $("#boardPage").load(location.href + " #adoptboard");
-  });
-  $("#region").click(() => {
-    $("#boardPage").load(location.href + " #regionboard");
-  });
-  $("#free").click(() => {
-    $("#boardPage").load(location.href + " #freeboard");
-  });
-</script>
+<script src="/js/blogPost.js"></script>
